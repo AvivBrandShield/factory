@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": ["Bash(*)", "Read(*)", "Edit(*)", "Write(*)"]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|MultiEdit|Grep|Glob|Bash",
+        "hooks": [{ "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/protect_generated.py\"" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{ "type": "command", "command": "black $CLAUDE_FILE_PATHS" }]
+      }
+    ]
+  }
+}

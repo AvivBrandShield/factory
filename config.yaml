@@ -1,0 +1,7 @@
+# Factory configuration
+agent: claude                        # which coding agent to use
+model: claude-3-5-sonnet-20241022    # latest model
+creativity: high
+max_retries: 3
+timeout: 600                         # seconds per agent call
+output_dir: ./out

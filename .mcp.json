@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "factory-docs": {
+      "command": "npx",
+      "args": ["-y", "@acme/factory-docs-mcp"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/"]
+    },
+    "tracker": {
+      "type": "http",
+      "url": "https://tracker.example.internal/mcp",
+      "headers": {
+        "Authorization": "Bearer trk_live_FAKE_0000000000000000000000000000"
+      }
+    }
+  }
+}
